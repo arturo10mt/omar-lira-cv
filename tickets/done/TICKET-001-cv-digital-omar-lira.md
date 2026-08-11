@@ -1,10 +1,10 @@
 # TICKET-001: CV digital de Omar Lira (español, paleta azul/gris)
 
-**Estado:** en progreso
+**Estado:** completado
 **Tipo:** feature
 **Prioridad:** alta
 **Creado:** 2026-08-11
-**Completado:** —
+**Completado:** 2026-08-11
 
 ## Descripción
 
@@ -51,14 +51,18 @@ Fuente de contenido: `OmarLiraCV_digital/Omar Lira CV Resume SPA.docx` y `Omar.p
 - [x] Validación responsiva completa: 7 páginas × 3 anchos (375/768/1280px), sin
       overflow horizontal — se encontró y corrigió un desbordamiento de 3px en la
       tarjeta "$200M+" de Logros en mobile (texto se recortaba)
-- [ ] Publicado en producción (dominio/hosting pendiente de definir)
+- [x] Publicado en producción — repo `github.com/arturo10mt/omar-lira-cv`, desplegado
+      en Vercel (`omar-lira-cv.vercel.app`). Dominio propio `omarlira.com` agregado en
+      Vercel; se le pasaron a Omar las instrucciones para cambiar sus nameservers a
+      `ns1.vercel-dns.com` / `ns2.vercel-dns.com` — pendiente de que él lo aplique y
+      de que propague (no controlado desde aquí).
 
-## Pendientes (ticket se queda abierto)
+## Pendiente para un ticket futuro
 
 - **Testimonios:** página omitida por completo (sin recomendaciones disponibles) —
-  se puede agregar después si Omar consigue recomendaciones de LinkedIn.
-- **Dominio/hosting:** no definido todavía (a diferencia de arturomt.com en Vercel,
-  o los clientes Profsitio en Netlify) — pendiente de decidir con el usuario.
+  se puede agregar si Omar consigue recomendaciones de LinkedIn.
+- **Verificar propagación de DNS** una vez Omar confirme que cambió los nameservers,
+  y confirmar `omarlira.com`/`www.omarlira.com` en vivo.
 
 ## Nota técnica
 
