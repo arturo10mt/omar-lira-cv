@@ -9,6 +9,7 @@ const { current = '' } = Astro.props;
 const links = [
   { href: '/', label: 'Inicio', key: 'home' },
   { href: '/about', label: 'Sobre Mí', key: 'about' },
+  { href: '/relation', label: 'Foros y Negociaciones', key: 'relation' },
   { href: '/experience', label: 'Experiencia', key: 'experience' },
   { href: '/achievements', label: 'Logros', key: 'achievements' },
   { href: '/skills', label: 'Habilidades', key: 'skills' },
@@ -22,15 +23,15 @@ const links = [
     <div class="flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-2.5">
         <img src="/omar.png" alt={profile.name} class="w-8 h-8 rounded-full object-cover object-top flex-shrink-0 ring-2 ring-blue-500/40" />
-        <span class="text-white font-semibold text-sm">{profile.name}</span>
+        <span class="text-white font-semibold text-sm whitespace-nowrap">{profile.name}</span>
       </a>
 
-      <div class="hidden lg:flex items-center gap-5">
+      <div class="hidden xl:flex items-center gap-4">
         {links.map((link) => (
           <a
             href={link.href}
             class:list={[
-              'text-sm font-medium transition-colors',
+              'text-sm font-medium transition-colors whitespace-nowrap',
               current === link.key ? 'text-white' : 'text-slate-400 hover:text-white',
             ]}
           >
@@ -42,14 +43,14 @@ const links = [
         </a>
       </div>
 
-      <button id="menu-btn" class="lg:hidden text-slate-400 hover:text-white p-1" aria-label="Menú">
+      <button id="menu-btn" class="xl:hidden text-slate-400 hover:text-white p-1" aria-label="Menú">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden lg:hidden pb-4 pt-3 border-t border-slate-800">
+    <div id="mobile-menu" class="hidden xl:hidden pb-4 pt-3 border-t border-slate-800">
       <div class="flex flex-col gap-3">
         {links.map((link) => (
           <a
